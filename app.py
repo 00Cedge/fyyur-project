@@ -38,8 +38,14 @@ class Venue(db.Model):
     state = db.Column(db.String(120), nullable=False)
     address = db.Column(db.String(120), nullable=False)
     phone = db.Column(db.String(120), nullable=False)
-    image_link = db.Column(db.String(500))
+    image_link = db.Column(db.String(500), nullable=False)
     facebook_link = db.Column(db.String(120))
+    website_link = db.Column(db.String(120))
+    looking_for_talent = db.Column(db.Boolean, nullable=False, default=False)
+    seeking_description = db.Column(db.String(500))
+
+    def __repr__(self):
+        return f'<Venue {self.id} {self.name} {self.city} {self.state} {self.address} {self.phone} {self.image_link} {self.facebook_link}>'
 
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
@@ -57,15 +63,18 @@ class Artist(db.Model):
     state = db.Column(db.String(120))
     phone = db.Column(db.String(120))
     # genres = db.Column(db.String(120))
-    image_link = db.Column(db.String(500))
+    image_link = db.Column(db.String(500), nullable=False)
     facebook_link = db.Column(db.String(120))
+    website_link = db.Column(db.String(120))
+    looking_for_venues = db.Column(db.Boolean, nullable=False, default=False)
+    seeking_description = db.Column(db.String(500))
 
 class Genres(db.Model):
     __tablename__ = 'genre'
 
     id = db.Column(db.Integer, primary_key=True)
     genre = db.Column(db.String(50), nullable=False)
-    artist = db.relationship('artist', secondary=artist_genres, backref=db.backref('genres', lazy=True))
+    artist = db.relationship('Artist', secondary=artist_genres, backref=db.backref('genres', lazy=True))
 
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
@@ -77,7 +86,6 @@ class Shows(db.Model):
     date = db.Column(db.DateTime, nullable=False)
     artist = db.Column(db.Integer, db.ForeignKey('artist.id'), nullable=False)
     venue = db.Column(db.Integer, db.ForeignKey('venue.id'), nullable=False)
-
 
 #----------------------------------------------------------------------------#
 # Filters.
@@ -109,34 +117,37 @@ def index():
 def venues():
   # TODO: replace with real venues data.
   #       num_upcoming_shows should be aggregated based on number of upcoming shows per venue.
-  data=[{
-    "city": "San Francisco",
-    "state": "CA",
-    "venues": [{
-      "id": 1,
-      "name": "The Musical Hop",
-      "num_upcoming_shows": 0,
-    }, {
-      "id": 3,
-      "name": "Park Square Live Music & Coffee",
-      "num_upcoming_shows": 1,
-    }]
-  }, {
-    "city": "New York",
-    "state": "NY",
-    "venues": [{
-      "id": 2,
-      "name": "The Dueling Pianos Bar",
-      "num_upcoming_shows": 0,
-    }]
-  }]
-  return render_template('pages/venues.html', areas=data);
+  
+  # data=[{
+  #   "city": "San Francisco",
+  #   "state": "CA",
+  #   "venues": [{
+  #     "id": 1,
+  #     "name": "The Musical Hop",
+  #     "num_upcoming_shows": 0,
+  #   }, {
+  #     "id": 3,
+  #     "name": "Park Square Live Music & Coffee",
+  #     "num_upcoming_shows": 1,
+  #   }]
+  # }, {
+  #   "city": "New York",
+  #   "state": "NY",
+  #   "venues": [{
+  #     "id": 2,
+  #     "name": "The Dueling Pianos Bar",
+  #     "num_upcoming_shows": 0,
+  #   }]
+  # }]
+  
+  return render_template('pages/venues.html', areas=Venue.query.all());
 
 @app.route('/venues/search', methods=['POST'])
 def search_venues():
   # TODO: implement search on artists with partial string search. Ensure it is case-insensitive.
   # seach for Hop should return "The Musical Hop".
   # search for "Music" should return "The Musical Hop" and "Park Square Live Music & Coffee"
+
   response={
     "count": 1,
     "data": [{
@@ -145,6 +156,8 @@ def search_venues():
       "num_upcoming_shows": 0,
     }]
   }
+
+
   return render_template('pages/search_venues.html', results=response, search_term=request.form.get('search_term', ''))
 
 @app.route('/venues/<int:venue_id>')
