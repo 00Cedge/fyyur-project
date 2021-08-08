@@ -71,6 +71,14 @@ class Genres(db.Model):
 
 # TODO Implement Show and Artist models, and complete all model relationships and properties, as a database migration.
 
+class Shows(db.Model):
+    __tablename__ = 'show'
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.DateTime, nullable=False)
+    artist = db.Column(db.Integer, db.ForeignKey('artist.id'), nullable=False)
+    venue = db.Column(db.Integer, db.ForeignKey('venue.id'), nullable=False)
+
+
 #----------------------------------------------------------------------------#
 # Filters.
 #----------------------------------------------------------------------------#
