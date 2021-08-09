@@ -54,6 +54,11 @@ artist_genres = db.Table('artist_genres',
     db.Column('genre_id', db.Integer, db.ForeignKey('genre.id'), primary_key=True)
 )
 
+venue_genres = db.Table('venue_genres',
+    db.Column('venue_id', db.Integer, db.ForeignKey('venue.id'), primary_key=True),
+    db.Column('genre_id', db.Integer, db.ForeignKey('genre.id'), primary_key=True)
+)
+
 class Artist(db.Model):
     __tablename__ = 'artist'
 
@@ -75,6 +80,7 @@ class Genres(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     genre = db.Column(db.String(50), nullable=False)
     artist = db.relationship('Artist', secondary=artist_genres, backref=db.backref('genres', lazy=True))
+    venue = db.relationship('Venue', secondary=venue_genres, backref=db.backref('genres', lazy=True))
 
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
@@ -148,16 +154,6 @@ def search_venues():
   # seach for Hop should return "The Musical Hop".
   # search for "Music" should return "The Musical Hop" and "Park Square Live Music & Coffee"
 
-  # response={
-  #   "count": 1,
-  #   "data": [{
-  #     "id": 2,
-  #     "name": "The Dueling Pianos Bar",
-  #     "num_upcoming_shows": 0,
-  #   }]
-  # }
-
-  # response=Venue.query.all()
   search = request.form.get('search_term')
   response = Venue.query.filter(Venue.name.ilike(f'%{search}%'))
 
@@ -298,14 +294,19 @@ def search_artists():
   # TODO: implement search on artists with partial string search. Ensure it is case-insensitive.
   # seach for "A" should return "Guns N Petals", "Matt Quevado", and "The Wild Sax Band".
   # search for "band" should return "The Wild Sax Band".
-  response={
-    "count": 1,
-    "data": [{
-      "id": 4,
-      "name": "Guns N Petals",
-      "num_upcoming_shows": 0,
-    }]
-  }
+
+  search = request.form.get('search_term')
+  response = Artist.query.filter(Artist.name.ilike(f'%{search}%'))
+
+  # response={
+  #   "count": 1,
+  #   "data": [{
+  #     "id": 4,
+  #     "name": "Guns N Petals",
+  #     "num_upcoming_shows": 0,
+  #   }]
+  # }
+
   return render_template('pages/search_artists.html', results=response, search_term=request.form.get('search_term', ''))
 
 @app.route('/artists/<int:artist_id>')
