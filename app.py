@@ -6,7 +6,6 @@ import json
 import dateutil.parser
 import babel
 from flask import Flask, render_template, request, Response, flash, redirect, url_for
-from flask_moment import Moment
 import logging
 from logging import Formatter, FileHandler
 from flask_wtf import Form
@@ -35,7 +34,6 @@ app.jinja_env.filters['datetime'] = format_datetime
 @app.route('/')
 def index():
   return render_template('pages/home.html')
-
 
 #  Venues
 #  ----------------------------------------------------------------
@@ -66,6 +64,37 @@ def venues():
   #     "num_upcoming_shows": 0,
   #   }]
   # }]
+
+  # current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+  # vq = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  # city_and_state = ''
+  # data = []
+  # for venue in vq:
+  #     upcoming_shows = venue.shows.filter(Shows.start_time > current_time).all()
+  #     if city_and_state == venue.city + venue.state:
+  #         data[len(data) - 1]["venues"].append({
+  #           "id": venue.id,
+  #           "name": venue.name,
+  #           "num_upcoming_shows": len(upcoming_shows)
+  #         })
+  #         print(upcoming_shows)
+  #     else:
+  #         city_and_state = venue.city + venue.state
+  #         data.append({
+  #           "city": venue.city,
+  #           "state": venue.state,
+  #           "venues": [{
+  #             "id": venue.id,
+  #             "name": venue.name,
+  #             "num_upcoming_shows": len(upcoming_shows)
+  #           }]
+  #         })
+  # return render_template('pages/venues.html', areas=data)
+
+  locals = []
+  venues = Venue.query.all()
+  places = Venue.query.distinct(Venue.city, Venue.state).all
+  print('locals')
   
   return render_template('pages/venues.html', areas=Venue.query.all());
 
@@ -163,6 +192,9 @@ def show_venue(venue_id):
   # }
   
   # data = list(filter(lambda d: d['id'] == venue_id, [data1, data2, data3]))[0]
+
+
+
 
   data = Venue.query.get(venue_id)
   
@@ -435,7 +467,7 @@ def shows():
   #   "start_time": "2035-04-15T20:00:00.000Z"
   # }]
 
-  result = []
+  data = []
   shows = Shows.query.join(Venue, Shows.venue_id == Venue.id).join(Artist, Artist.id == Shows.artist_id).all()
   for show in shows:
     print(show.artist.name)
@@ -446,13 +478,8 @@ def shows():
     "artist_image_link": show.artist.image_link,
     "start_time": str(show.start_time)
     }
-    result.append(showObj)
+    data.append(showObj)
 
-  return render_template('pages/shows.html', shows=result)
-
-  # shows_query = Shows.query. 
-
-  # data = Shows.query.all()
   return render_template('pages/shows.html', shows=data)
 
 @app.route('/shows/create')
