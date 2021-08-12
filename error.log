@@ -917,3 +917,177 @@ Traceback (most recent call last):
     shows = Show.query.filter_by(venue_id).all()
 TypeError: filter_by() takes 1 positional argument but 2 were given
 2021-08-12 12:24:45,839 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:499]
+2021-08-12 12:25:20,881 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:499]
+2021-08-12 12:25:22,214 ERROR: Exception on /venues/3 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 196, in show_venue
+    shows = Show.query.filter_by(venue_id==venue_id).all()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2021-08-12 12:32:00,671 ERROR: Exception on /venues/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 196, in show_venue
+    shows = Show.query.filter_by(venue_id=venue_id).all()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2021-08-12 12:32:36,117 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:540]
+2021-08-12 12:34:09,063 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:540]
+2021-08-12 12:34:38,160 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:540]
+2021-08-12 12:35:02,592 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:540]
+2021-08-12 12:37:04,666 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:540]
+2021-08-12 12:39:13,764 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:541]
+2021-08-12 12:40:25,661 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:45:33,080 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:48:35,639 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:49:43,219 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:51:19,421 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:51:20,923 ERROR: Exception on /artists/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 377, in show_artist
+    'venue_image_link': show.image_link,
+AttributeError: 'Show' object has no attribute 'image_link'
+2021-08-12 12:51:49,260 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:54:15,067 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:56:50,867 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 12:57:42,991 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 13:01:00,675 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 13:01:29,512 ERROR: Exception on /artists/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 406, in show_artist
+    return render_template('pages/show_artist.html', venue=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 4, in top-level template code
+    <title>{% block title %}{% endblock %}</title>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 2, in block 'title'
+    {% block title %}{{ artist.name }} | Artist{% endblock %}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'artist' is undefined
+2021-08-12 13:02:01,068 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:542]
+2021-08-12 13:02:11,778 ERROR: Exception on /artists/2 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 406, in show_artist
+    return render_template('pages/show_artist.html', venue=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 4, in top-level template code
+    <title>{% block title %}{% endblock %}</title>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 2, in block 'title'
+    {% block title %}{{ artist.name }} | Artist{% endblock %}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'artist' is undefined
+2021-08-12 13:02:14,030 ERROR: Exception on /artists/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 406, in show_artist
+    return render_template('pages/show_artist.html', venue=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 4, in top-level template code
+    <title>{% block title %}{% endblock %}</title>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 2, in block 'title'
+    {% block title %}{{ artist.name }} | Artist{% endblock %}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'artist' is undefined
+2021-08-12 13:05:26,066 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:543]
+2021-08-12 13:05:33,753 ERROR: Exception on /artists/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 407, in show_artist
+    return render_template('pages/show_artist.html', venue=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 4, in top-level template code
+    <title>{% block title %}{% endblock %}</title>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_artist.html", line 2, in block 'title'
+    {% block title %}{{ artist.name }} | Artist{% endblock %}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'artist' is undefined
