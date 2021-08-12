@@ -464,3 +464,456 @@ Traceback (most recent call last):
   File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3419, in _do_configure_registries
     raise e
 sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->venue'. Original exception was: When initializing mapper mapped class Venue->venue, expression 'Shows' failed to locate a name ('Shows'). If this is a class name, consider adding this relationship() to the <class 'models.Venue'> class after both dependent classes have been defined.
+2021-08-11 16:33:32,801 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:473]
+2021-08-11 16:45:33,693 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:479]
+2021-08-11 16:47:59,886 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:479]
+2021-08-11 16:48:22,361 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:481]
+2021-08-11 16:48:25,245 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 424, in shows
+    venue = Venue.query.first(venue_id)
+TypeError: first() takes 1 positional argument but 2 were given
+2021-08-11 16:51:02,503 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 424, in shows
+    venue = Venue.query.first_or_404(venue_id)
+TypeError: first() takes 1 positional argument but 2 were given
+2021-08-11 16:51:03,920 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 424, in shows
+    venue = Venue.query.first_or_404(venue_id)
+TypeError: first() takes 1 positional argument but 2 were given
+2021-08-11 16:51:19,454 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:479]
+2021-08-11 16:52:26,798 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:479]
+2021-08-11 16:52:29,698 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\attributes.py", line 327, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'query'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 424, in shows
+    venue = Venue.shows.query.first_or_404(venue_id)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\attributes.py", line 329, in __getattr__
+    util.raise_(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Venue.shows has an attribute 'query'
+2021-08-11 16:52:49,260 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:479]
+2021-08-11 16:53:22,679 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:480]
+2021-08-11 16:54:17,370 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:481]
+2021-08-12 10:44:06,777 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:481]
+2021-08-12 10:46:32,017 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 10:48:56,346 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:49:55,404 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:49:58,234 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 427, in shows
+    shows = venue.shows
+AttributeError: 'list' object has no attribute 'shows'
+2021-08-12 10:51:06,549 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:51:09,208 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 427, in shows
+    shows = venue.shows
+AttributeError: 'list' object has no attribute 'shows'
+2021-08-12 10:52:03,936 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:52:07,323 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 427, in shows
+    shows = Venue.show
+AttributeError: type object 'Venue' has no attribute 'show'
+2021-08-12 10:53:39,085 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:53:42,317 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 426, in shows
+    venue = Venue.query.all(venue_id)
+TypeError: all() takes 1 positional argument but 2 were given
+2021-08-12 10:54:18,119 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:54:21,244 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 427, in shows
+    shows = venue.shows
+AttributeError: 'list' object has no attribute 'shows'
+2021-08-12 10:54:56,995 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:54:58,340 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 429, in shows
+    showObj = {"venue_id": show.venue_id,
+AttributeError: 'Venue' object has no attribute 'venue_id'
+2021-08-12 10:57:01,160 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:490]
+2021-08-12 10:57:05,051 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 426, in shows
+    venue = Venue.query.first_or_404(venue_id)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 550, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 442, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 421, in _inspect_mapped_class
+    mapper._check_configure()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1873, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3384, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3423, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1890, in _post_configure_properties
+    prop.init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 222, in init
+    self.do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\relationships.py", line 2147, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 659, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 621, in _get_strategy
+    cls = self._strategy_lookup(self, *key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 705, in _strategy_lookup
+    raise orm_exc.LoaderStrategyException(
+sqlalchemy.orm.exc.LoaderStrategyException: Can't find strategy (('lazy', 'True'),) for Venue.shows
+2021-08-12 10:57:20,517 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 10:57:24,619 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 426, in shows
+    venue = Venue.query.first_or_404(venue_id)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 550, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 442, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 421, in _inspect_mapped_class
+    mapper._check_configure()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1873, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3384, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3423, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1890, in _post_configure_properties
+    prop.init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 222, in init
+    self.do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\relationships.py", line 2147, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 659, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 621, in _get_strategy
+    cls = self._strategy_lookup(self, *key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 705, in _strategy_lookup
+    raise orm_exc.LoaderStrategyException(
+sqlalchemy.orm.exc.LoaderStrategyException: Can't find strategy (('lazy', 'True'),) for Venue.shows
+2021-08-12 10:57:47,888 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 10:58:00,794 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 10:58:02,928 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 426, in shows
+    venue = Venue.query.first_or_404(venue_id)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 550, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 442, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\base.py", line 421, in _inspect_mapped_class
+    mapper._check_configure()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1873, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3384, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 3423, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\mapper.py", line 1890, in _post_configure_properties
+    prop.init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 222, in init
+    self.do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\relationships.py", line 2147, in do_init
+    super(RelationshipProperty, self).do_init()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 659, in do_init
+    self.strategy = self._get_strategy(self.strategy_key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 621, in _get_strategy
+    cls = self._strategy_lookup(self, *key)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\interfaces.py", line 705, in _strategy_lookup
+    raise orm_exc.LoaderStrategyException(
+sqlalchemy.orm.exc.LoaderStrategyException: Can't find strategy (('lazy', 'True'),) for Venue.shows
+2021-08-12 10:58:56,760 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 10:59:14,524 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 10:59:16,874 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 427, in shows
+    print(venue.show)
+AttributeError: 'Venue' object has no attribute 'show'
+2021-08-12 10:59:34,167 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:491]
+2021-08-12 11:01:19,581 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:493]
+2021-08-12 11:02:21,541 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:493]
+2021-08-12 11:02:24,994 ERROR: Exception on /shows [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 456, in shows
+    return render_template('pages/shows.html', shows=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\shows.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\shows.html", line 9, in block 'content'
+    <h4>{{ show.start_time|datetime('full') }}</h4>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 22, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 646, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 725, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 207, in split
+    return list(cls(s))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 75, in __init__
+    raise TypeError('Parser must be a string or character stream, not '
+TypeError: Parser must be a string or character stream, not datetime
+2021-08-12 11:09:12,609 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:492]
+2021-08-12 11:09:57,891 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:475]
+2021-08-12 11:10:58,533 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:475]
+2021-08-12 11:29:38,391 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:483]
+2021-08-12 11:30:56,833 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:483]
+2021-08-12 11:39:18,256 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:40:19,280 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:41:09,052 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:43:59,818 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:44:52,491 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:46:10,045 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:47:21,840 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:482]
+2021-08-12 11:52:38,405 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:494]
+2021-08-12 11:52:42,314 ERROR: Exception on /venues/1 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 229, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+NameError: name 'data' is not defined
+2021-08-12 11:53:53,645 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:496]
+2021-08-12 11:54:58,906 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:497]
+2021-08-12 11:58:41,397 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:484]
+2021-08-12 12:01:16,078 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:484]
+2021-08-12 12:08:53,053 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:09:09,975 ERROR: Exception on /venues/3 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 224, in show_venue
+    'website':venue.website,
+AttributeError: 'Venue' object has no attribute 'website'
+2021-08-12 12:10:29,959 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:12:22,685 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:12:40,197 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:12:44,703 ERROR: Exception on /venues/3 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 226, in show_venue
+    'seeking_venue':venue.seeking_venue,
+AttributeError: 'Venue' object has no attribute 'seeking_venue'
+2021-08-12 12:13:41,431 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:14:26,605 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:15:43,955 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:16:41,981 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:16:45,547 ERROR: Exception on /venues/3 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 235, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\show_venue.html", line 57, in block 'content'
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 22, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 646, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 725, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 207, in split
+    return list(cls(s))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\dateutil\parser\_parser.py", line 75, in __init__
+    raise TypeError('Parser must be a string or character stream, not '
+TypeError: Parser must be a string or character stream, not datetime
+2021-08-12 12:17:54,220 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:21:13,440 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:21:46,849 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:500]
+2021-08-12 12:23:00,354 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:499]
+2021-08-12 12:24:10,175 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:499]
+2021-08-12 12:24:13,249 ERROR: Exception on /venues/3 [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 196, in show_venue
+    shows = Show.query.filter_by(venue_id).all()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2021-08-12 12:24:45,839 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:499]

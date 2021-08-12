@@ -10,7 +10,8 @@ import logging
 from logging import Formatter, FileHandler
 from flask_wtf import Form
 from forms import *
-from models import Artist, Venue, Show, db, app
+# from models import Artist, Venue, Show, db, app
+from models import *
 
 
 #----------------------------------------------------------------------------#
@@ -190,14 +191,46 @@ def show_venue(venue_id):
   #   "past_shows_count": 1,
   #   "upcoming_shows_count": 1,
   # }
-  
   # data = list(filter(lambda d: d['id'] == venue_id, [data1, data2, data3]))[0]
 
+  shows = Show.query.filter_by(venue_id=venue_id).all()
+  venue = Venue.query.get(venue_id)
+  data = []
+  past_shows = []
+  upcoming_shows = []
 
+  for show in shows:
+      temp_show = {
+          'artist_id': show.artist_id,
+          'artist_name': show.artist.name,
+          'artist_image_link': show.artist.image_link,
+          'start_time': str(show.start_time),
+      }
+      if show.start_time <= datetime.now():
+          past_shows.append(temp_show)
+      else:
+          upcoming_shows.append(temp_show)
+      # print(show.artist.name)
+      data.append(temp_show)
 
+  data = {
+    'id': venue.id,
+    'name': venue.name,
+    'city': venue.city,
+    'phone': venue.phone,
+    'genres':venue.genres,
+    'facebook_link':venue.facebook_link,
+    'website':venue.website,
+    'image_link': venue.image_link,
+    'seeking_venue':venue.seeking_talent,
+    'upcoming_shows':upcoming_shows,
+    'past_shows':past_shows,
+    'past_shows_count': len(past_shows),
+    'upcoming_shows_count': len(upcoming_shows)
+}
 
-  data = Venue.query.get(venue_id)
-  
+  print(data)
+
   return render_template('pages/show_venue.html', venue=data)
 
 #  Create Venue
@@ -411,19 +444,11 @@ def create_artist_submission():
 def shows():
   # displays list of shows at /shows
   # TODO: replace with real venues data.
-  # data=[{
-  #   "venue_id": 1,
-  #   "venue_name": "The Musical Hop",
-  #   "artist_id": 4,
-  #   "artist_name": "Guns N Petals",
-  #   "artist_image_link": "https://images.unsplash.com/photo-1549213783-8284d0336c4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
-  #   "start_time": "2019-05-21T21:30:00.000Z"
-  # }
 
   data = []
-  shows = Show.query.join(Venue, Show.venue_id == Venue.id).join(Artist, Artist.id == Show.artist_id).all()
+  shows = Show.query.all()
+
   for show in shows:
-    print(show.artist.name)
     showObj = {"venue_id": show.venue_id,
     "venue_name": show.venue.name,
     "artist_id": show.artist_id,
@@ -431,8 +456,9 @@ def shows():
     "artist_image_link": show.artist.image_link,
     "start_time": str(show.start_time)
     }
+    # print(show.artist.name)
     data.append(showObj)
-
+  # print(data)
   return render_template('pages/shows.html', shows=data)
 
 @app.route('/shows/create')
