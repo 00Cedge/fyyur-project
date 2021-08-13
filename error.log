@@ -1091,3 +1091,132 @@ Traceback (most recent call last):
   File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'artist' is undefined
+2021-08-12 13:07:52,098 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:543]
+2021-08-13 09:33:53,141 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:543]
+2021-08-13 10:17:27,447 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:356]
+2021-08-13 10:24:42,521 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:356]
+2021-08-13 10:26:27,517 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:356]
+2021-08-13 10:30:38,274 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:357]
+2021-08-13 10:32:04,597 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:357]
+2021-08-13 10:32:45,289 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:358]
+2021-08-13 10:35:48,991 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:359]
+2021-08-13 10:37:56,981 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:359]
+2021-08-13 10:39:14,304 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:350]
+2021-08-13 10:39:16,560 ERROR: Exception on /venues/create [POST] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 123, in create_venue_submission
+    website=form.website.data, seeking_talent=form.seeking_talent.data)
+AttributeError: 'VenueForm' object has no attribute 'website'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 131, in create_venue_submission
+    print(venue)
+UnboundLocalError: local variable 'venue' referenced before assignment
+2021-08-13 10:39:34,816 ERROR: Exception on /venues/create [POST] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 123, in create_venue_submission
+    website=form.website.data, seeking_talent=form.seeking_talent.data)
+AttributeError: 'VenueForm' object has no attribute 'website'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 131, in create_venue_submission
+    print(venue)
+UnboundLocalError: local variable 'venue' referenced before assignment
+2021-08-13 10:41:14,602 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:350]
+2021-08-13 10:42:19,656 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:359]
+2021-08-13 10:42:36,426 ERROR: Exception on /venues/create [POST] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.StringDataRightTruncation: value too long for type character varying(120)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 134, in create_venue_submission
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 3298, in flush
+    self._flush(objects)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 3438, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 3398, in _flush
+    flush_context.execute()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\persistence.py", line 1219, in _emit_insert_statements
+    result = connection._execute_20(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1583, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1452, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1814, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1995, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(120)
+
+[SQL: INSERT INTO venue (name, city, state, address, phone, genres, image_link, facebook_link, website, seeking_talent, seeking_description) VALUES (%(name)s, %(city)s, %(state)s, %(address)s, %(phone)s, %(genres)s::VARCHAR[], %(image_link)s, %(facebook_link)s, %(website)s, %(seeking_talent)s, %(seeking_description)s) RETURNING venue.id]
+[parameters: {'name': 'asdg', 'city': 'Gillitts', 'state': 'AL', 'address': '1 Vian Road', 'phone': '123', 'genres': ['Alternative', 'Blues'], 'image_link': 'https://images.unsplash.com/photo-1485686531765-ba63b07845a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80', 'facebook_link': 'https://images.unsplash.com/photo-1485686531765-ba63b07845a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80', 'website': 'https://images.unsplash.com/photo-1485686531765-ba63b07845a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=747&q=80', 'seeking_talent': True, 'seeking_description': 'asdgadfgsdafgsdfgsdfgs asdf asdf asd'}]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 140, in create_venue_submission
+    print(venue)
+NameError: name 'venue' is not defined
+2021-08-13 10:45:43,866 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:359]
