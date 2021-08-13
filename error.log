@@ -1220,3 +1220,40 @@ Traceback (most recent call last):
     print(venue)
 NameError: name 'venue' is not defined
 2021-08-13 10:45:43,866 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:359]
+2021-08-13 10:46:15,546 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:358]
+2021-08-13 10:55:42,048 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:358]
+2021-08-13 10:59:12,631 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:360]
+2021-08-13 11:05:40,407 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:360]
+2021-08-13 11:07:23,921 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:360]
+2021-08-13 11:11:20,845 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:360]
+2021-08-13 11:12:02,315 ERROR: Exception on /venues/create [POST] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 127, in create_venue_submission
+    website = request.form['website']
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\datastructures.py", line 377, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 137, in create_venue_submission
+    print(sys.exc_info())
+NameError: name 'sys' is not defined
+2021-08-13 11:13:13,895 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:361]
+2021-08-13 11:14:08,447 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:361]
+2021-08-13 11:16:24,946 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:362]
+2021-08-13 11:25:36,983 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:362]
+2021-08-13 11:26:04,542 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:362]
+2021-08-13 11:50:01,277 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:362]
+2021-08-13 11:50:11,459 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:362]
+2021-08-13 12:08:20,227 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:385]
+2021-08-13 12:16:05,615 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:398]
