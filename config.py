@@ -4,7 +4,7 @@ SECRET_KEY = os.urandom(32)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Enable debug mode.
-DEBUG = False
+DEBUG = True
 
 # Connect to the database
 
@@ -12,4 +12,4 @@ DEBUG = False
 # TODO IMPLEMENT DATABASE URL
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:building@localhost:5432/fyyurapp'
 
-SQLALCHEMY_TRACK_MODIFICATIONS = 'False'
+SQLALCHEMY_TRACK_MODIFICATIONS = 'True'

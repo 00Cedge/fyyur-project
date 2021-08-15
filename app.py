@@ -152,17 +152,34 @@ def create_venue_submission():
   # see: http://flask.pocoo.org/docs/1.0/patterns/flashing/
   return render_template('pages/home.html')
 
-@app.route('/venues/<venue_id>', methods=['DELETE'])
+@app.route('/venues/<venue_id>', methods=['POST'])
 def delete_venue(venue_id):
+    try:
+        venue = Venue.query.filter_by(id=venue_id).first_or_404()
+        # current_session = db.object_session(venue)
+        # current_session.delete(venue)
+        # current_session.commit()
+        db.session.delete(venue)
+        db.session.commit()
+        flash('The venue has been removed together with all of its shows.')
+        return render_template('pages/home.html')
+    except ValueError:
+        db.session.rollback()
+        print(sys.exc_info())
+        flash('It was not possible to delete this Venue')
+    finally:
+        db.session.close()
+    return redirect(url_for('venues'))
   # TODO: Complete this endpoint for taking a venue_id, and using
   # SQLAlchemy ORM to delete a record. Handle cases where the session commit could fail.
 
   # BONUS CHALLENGE: Implement a button to delete a Venue on a Venue Page, have it so that
   # clicking that button delete it from the db then redirect the user to the homepage
-  return None
+  # return None
 
 #  Artists
 #  ----------------------------------------------------------------
+
 @app.route('/artists')
 def artists():
   # TODO: replace with real data returned from querying the database
@@ -226,6 +243,22 @@ def show_artist(artist_id):
   print(data)
 
   return render_template('pages/show_artist.html', artist=data)
+
+@app.route('/artist/<artist_id>', methods=['POST'])
+def delete_artist(artist_id):
+    try:
+        artist = Artist.query.filter_by(id=artist_id).first_or_404()
+        db.session.delete(artist)
+        db.session.commit()
+        flash('The artist has been removed together with all of its shows.')
+        return render_template('pages/home.html')
+    except ValueError:
+        db.session.rollback()
+        print(sys.exc_info())
+        flash('It was not possible to delete this Artist')
+    finally:
+        db.session.close()
+    return redirect(url_for('artists'))
 
 #  Update
 #  ----------------------------------------------------------------
