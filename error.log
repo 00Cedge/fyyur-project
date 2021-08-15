@@ -1259,3 +1259,88 @@ NameError: name 'sys' is not defined
 2021-08-13 12:16:05,615 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:398]
 2021-08-13 17:23:19,189 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:398]
 2021-08-13 17:26:05,454 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:398]
+2021-08-15 11:15:20,550 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:441]
+2021-08-15 11:15:23,053 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:441]
+2021-08-15 11:17:32,539 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:421]
+2021-08-15 11:18:05,369 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:421]
+2021-08-15 11:28:52,563 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:409]
+2021-08-15 11:33:12,814 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:428]
+2021-08-15 11:43:46,852 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:436]
+2021-08-15 12:14:26,464 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:429]
+2021-08-15 12:16:56,804 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:429]
+2021-08-15 12:20:01,335 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:430]
+2021-08-15 13:54:57,169 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:431]
+2021-08-15 14:01:25,736 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:436]
+2021-08-15 14:14:02,912 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:433]
+2021-08-15 14:18:42,450 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:25:04,792 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:25:40,802 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:28:22,444 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:28:56,748 ERROR: Exception on /artists/1/edit [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column artist.website does not exist
+LINE 2: ...nk, artist.facebook_link AS artist_facebook_link, artist.web...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 268, in edit_artist
+    artist = Artist.query.filter_by(id=artist_id).first_or_404()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_sqlalchemy\__init__.py", line 468, in first_or_404
+    rv = self.first()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2763, in first
+    return self.limit(1)._iter().first()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2847, in _iter
+    result = self.session.execute(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1583, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1452, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1814, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1995, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column artist.website does not exist
+LINE 2: ...nk, artist.facebook_link AS artist_facebook_link, artist.web...
+                                                             ^
+
+[SQL: SELECT anon_1.artist_id AS anon_1_artist_id, anon_1.artist_name AS anon_1_artist_name, anon_1.artist_city AS anon_1_artist_city, anon_1.artist_state AS anon_1_artist_state, anon_1.artist_phone AS anon_1_artist_phone, anon_1.artist_genres AS anon_1_artist_genres, anon_1.artist_image_link AS anon_1_artist_image_link, anon_1.artist_facebook_link AS anon_1_artist_facebook_link, anon_1.artist_website AS anon_1_artist_website, anon_1.artist_seeking_venue AS anon_1_artist_seeking_venue, anon_1.artist_seeking_description AS anon_1_artist_seeking_description, show_1.id AS show_1_id, show_1.start_time AS show_1_start_time, show_1.artist_id AS show_1_artist_id, show_1.venue_id AS show_1_venue_id 
+FROM (SELECT artist.id AS artist_id, artist.name AS artist_name, artist.city AS artist_city, artist.state AS artist_state, artist.phone AS artist_phone, artist.genres AS artist_genres, artist.image_link AS artist_image_link, artist.facebook_link AS artist_facebook_link, artist.website AS artist_website, artist.seeking_venue AS artist_seeking_venue, artist.seeking_description AS artist_seeking_description 
+FROM artist 
+WHERE artist.id = %(id_1)s 
+ LIMIT %(param_1)s) AS anon_1 LEFT OUTER JOIN show AS show_1 ON anon_1.artist_id = show_1.artist_id]
+[parameters: {'id_1': 1, 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2021-08-15 14:29:27,328 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:33:12,713 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:41:01,341 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:52:28,737 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:57:49,207 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 14:58:38,280 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 15:03:01,349 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:425]
+2021-08-15 15:06:52,264 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:437]
+2021-08-15 15:11:22,215 INFO: errors [in C:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:437]
