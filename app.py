@@ -42,7 +42,15 @@ def index():
 @app.route('/venues')
 def venues():  
   venues = Venue.query.all()
-  return render_template('pages/venues.html', areas=venues);
+
+
+
+  data = venues
+
+
+
+
+  return render_template('pages/venues.html', areas=data);
 
 @app.route('/venues/search', methods=['POST'])
 def search_venues():
