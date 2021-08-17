@@ -121,6 +121,7 @@ ul.items > li:hover h5 {
   padding: 5px 5px 5px;
   flex: 1;
 }
+}
 .item h5 {
   margin-top: 0;
   margin-bottom: 5px;
@@ -208,4 +209,10 @@ h2.monospace {
 }
 .subtitle {
   opacity: 0.5;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline
 }

@@ -4,14 +4,23 @@
 {% for area in areas %}
 <h3>{{ area.city }}, {{ area.state }}</h3>
 	<ul class="items">
-		<li>
-			<a href="/venues/{{ area.id }}">
-				<i class="fas fa-music"></i>
-				<div class="item">
-					<h5>{{ area.name }}</h5>
-				</div>
-			</a>
-		</li>
+		{% for venue in area.venues %}
+			<li class="btn-row">
+				<a href="/venues/{{ venue.id }}">
+					<i class="fas fa-music"></i>
+					<div class="item">
+						<h5>
+							{{ venue.name }} 
+							<small>(Upcoming shows {{venue.shows}})</small>
+						</h5>
+					</div>
+				</a>
+				<form>
+					<input type="submit" value="X" 
+					formmethod="POST" formaction="{{ url_for('delete_venue', venue_id=venue.id) }}" class="btn btn-primary btn-xs btn-danger">
+				</form>
+			</li>
+		{% endfor %}
 	</ul>
 {% endfor %}
 {% endblock %}
