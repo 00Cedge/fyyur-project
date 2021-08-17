@@ -2,6 +2,7 @@
 # Imports
 #----------------------------------------------------------------------------#
 
+from itertools import groupby
 import sys
 import json
 import dateutil.parser
@@ -41,16 +42,23 @@ def index():
 
 @app.route('/venues')
 def venues():  
+  locals = []
   venues = Venue.query.all()
-
-
-
-  data = venues
-
-
-
-
-  return render_template('pages/venues.html', areas=data);
+  places = Venue.query.distinct(Venue.city, Venue.state).all()
+	
+  for place in places:
+      locals.append({
+          'city': place.city,
+          'state': place.state,
+          'venues': [{
+              'id': venue.id,
+              'name': venue.name,
+              'shows': len([show for show in venue.shows if show.start_time > datetime.now()])
+          } for venue in venues if
+              venue.city == place.city and venue.state == place.state]
+      })
+  print("locals" , locals)
+  return render_template('pages/venues.html', areas=locals)
 
 @app.route('/venues/search', methods=['POST'])
 def search_venues():
@@ -173,7 +181,7 @@ def search_artists():
 
 @app.route('/artists/<int:artist_id>')
 def show_artist(artist_id):
-  shows = Show.query.all()
+  shows = Show.query.filter_by(artist_id=artist_id).all()
   artist = Artist.query.get(artist_id)
   data = []
   past_shows = []

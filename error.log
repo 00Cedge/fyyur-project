@@ -1826,3 +1826,699 @@ jinja2.exceptions.UndefinedError: 'venue' is undefined
 2021-08-15 18:59:19,059 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:377]
 2021-08-15 19:00:56,318 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:377]
 2021-08-15 19:03:23,611 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:384]
+2021-08-16 14:35:43,801 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:384]
+2021-08-16 14:42:01,787 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:384]
+2021-08-16 14:42:12,919 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:384]
+2021-08-16 14:42:56,268 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:384]
+2021-08-16 14:53:30,084 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:389]
+2021-08-16 14:53:33,288 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 48, in venues
+    areas = Venue.query(Venue.column, func.count(Venue.column)).group_by(Venue.column).all()
+AttributeError: type object 'Venue' has no attribute 'column'
+2021-08-16 14:54:12,765 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:389]
+2021-08-16 14:54:14,426 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 48, in venues
+    areas = Venue.query(Venue.name, func.count(Venue.shows)).group_by(Venue.city).all()
+TypeError: 'BaseQuery' object is not callable
+2021-08-16 14:58:12,177 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:388]
+2021-08-16 14:58:12,614 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 47, in venues
+    areas = Venue.query(Venue.name, func.count(Venue.shows)).group_by(Venue.city).all()
+NameError: name 'func' is not defined
+2021-08-16 14:58:27,032 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:389]
+2021-08-16 15:00:57,792 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:390]
+2021-08-16 15:01:45,982 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:390]
+2021-08-16 15:04:06,959 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 15:04:10,271 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in venues
+    'city': areas.city,
+AttributeError: 'list' object has no attribute 'city'
+2021-08-16 15:05:43,647 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-16 15:05:45,890 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 51, in venues
+    'city': areas.city,
+AttributeError: 'list' object has no attribute 'city'
+2021-08-16 15:06:32,142 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:393]
+2021-08-16 15:06:34,521 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 51, in venues
+    'city': areas.city,
+AttributeError: 'list' object has no attribute 'city'
+2021-08-16 15:09:59,271 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:393]
+2021-08-16 15:10:00,384 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in venues
+    'venues': [venue.get_venue() for venue in venues],
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in <listcomp>
+    'venues': [venue.get_venue() for venue in venues],
+AttributeError: 'Venue' object has no attribute 'get_venue'
+2021-08-16 15:15:12,665 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in venues
+    'venues': [venue.get_venue() for venue in venues],
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in <listcomp>
+    'venues': [venue.get_venue() for venue in venues],
+AttributeError: 'Venue' object has no attribute 'get_venue'
+2021-08-16 15:15:32,881 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:393]
+2021-08-16 15:15:35,333 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in venues
+    'venues': [Venue.get_venue() for venue in venues],
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 53, in <listcomp>
+    'venues': [Venue.get_venue() for venue in venues],
+TypeError: get_venue() missing 3 required positional arguments: 'self', 'city', and 'state'
+2021-08-16 17:03:57,801 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:04:33,325 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:04:52,478 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:07:21,566 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:09:03,875 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:09:06,313 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 63, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 12, in block 'content'
+    {{ venue.name }}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'venue' is undefined
+2021-08-16 17:10:20,255 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:10:21,345 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 63, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 12, in block 'content'
+    {{ venue.name }}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'venue' is undefined
+2021-08-16 17:10:32,734 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 63, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 12, in block 'content'
+    {{ venue.name }}
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'venue' is undefined
+2021-08-16 17:10:51,538 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:11:26,049 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:11:56,809 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:12:15,911 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:12:33,457 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-16 17:12:47,518 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 08:55:28,476 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 09:01:02,493 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 09:01:52,718 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 09:02:42,200 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 09:02:43,196 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 63, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 7, in template
+    {% for area.venues in areas %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'in', got '.'
+2021-08-17 09:02:45,723 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 63, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 7, in template
+    {% for area.venues in areas %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'in', got '.'
+2021-08-17 09:03:55,517 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:394]
+2021-08-17 09:05:09,374 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:395]
+2021-08-17 09:05:12,917 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 60, in venues
+    print("venue in areas", data.venues)
+AttributeError: 'list' object has no attribute 'venues'
+2021-08-17 09:06:29,171 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:06:31,487 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", data.venue.name)
+AttributeError: 'list' object has no attribute 'venue'
+2021-08-17 09:07:16,250 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:08:01,200 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:08:24,295 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:09:15,269 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:09:21,515 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 65, in venues
+    return render_template('pages/venues.html', areas=data);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 9, in block 'content'
+    <a href="/venues/{{ venue.id }}">
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'venue' is undefined
+2021-08-17 09:10:08,169 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:11:34,246 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:12:51,817 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:15:07,943 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:15:09,346 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 49, in venues
+    data.append({
+NameError: name 'data' is not defined
+2021-08-17 09:15:36,814 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:16:01,979 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:19:41,091 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:21:35,190 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:21:36,337 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.name, venue.num_upcoming_shows)
+AttributeError: 'Venue' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:22:36,257 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:22:37,273 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.name, areas.num_upcoming_shows)
+AttributeError: 'list' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:23:47,488 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:23:50,927 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.name, areas[2].num_upcoming_shows)
+AttributeError: 'dict' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:24:53,133 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:24:54,234 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.name, venue.num_upcoming_shows)
+AttributeError: 'Venue' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:25:12,185 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:25:16,039 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.num_upcoming_shows)
+AttributeError: 'Venue' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:25:48,452 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.num_upcoming_shows)
+AttributeError: 'Venue' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:26:03,043 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:27:56,438 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:28:37,415 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:28:40,248 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", venue.num_upcoming_shows)
+AttributeError: 'Venue' object has no attribute 'num_upcoming_shows'
+2021-08-17 09:31:27,553 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:34:02,852 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:36:34,666 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:36:35,465 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 52, in venues
+    'venues': [{
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 55, in <listcomp>
+    'shows': count([show for show in venue.shows if show.start_time > datetime.now()])
+TypeError: a number is required
+2021-08-17 09:37:16,774 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:38:14,361 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:38:50,084 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:39:35,571 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:39:35,810 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 65, in venues
+    return render_template('pages/venues.html', areas=areas, venues=venues);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 15, in template
+    <small>(Upcoming shows {{venue.shows})</small>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+2021-08-17 09:40:02,602 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:40:46,558 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:41:00,523 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:41:55,332 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:41:56,360 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", places.shows)
+AttributeError: 'list' object has no attribute 'shows'
+2021-08-17 09:42:56,335 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:43:19,821 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:43:21,116 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", area.shows)
+AttributeError: 'dict' object has no attribute 'shows'
+2021-08-17 09:43:25,139 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:43:26,809 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 61, in venues
+    print("venue in areas", area.shows)
+AttributeError: 'dict' object has no attribute 'shows'
+2021-08-17 09:43:46,302 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:44:11,343 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:44:17,251 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:45:20,834 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 09:50:25,505 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:52:14,154 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:52:16,176 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 65, in venues
+    return render_template('pages/venues.html', areas=areas, venues=venues);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 15, in template
+    <small>(Upcoming shows {{venue.shows.}})</small>
+jinja2.exceptions.TemplateSyntaxError: expected name or number
+2021-08-17 09:52:33,965 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 09:54:39,458 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 09:57:44,108 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 09:58:22,742 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 10:01:28,956 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:02:00,015 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:02:27,471 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:02:46,589 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:03:11,988 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:03:23,058 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:05:07,554 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:05:08,359 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 65, in venues
+    return render_template('pages/venues.html', areas=areas, venues=venues);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 8, in template
+    {% if venue.city == area.city and venue.state == area.state % and for show in show in venue.shows if show.start_time > datetime.now()] &}
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'for'
+2021-08-17 10:07:03,778 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:07:27,844 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:08:09,879 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:09:01,247 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:396]
+2021-08-17 10:13:46,351 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 10:16:22,203 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 10:16:23,480 ERROR: Exception on /venues [GET] [in C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py:1454]
+Traceback (most recent call last):
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py", line 66, in venues
+    return render_template('pages/venues.html', areas=areas);
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\templates\pages\venues.html", line 9, in block 'content'
+    <a href="/venues/{{ venue.id }}">
+  File "C:\Users\Cedge\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'venue' is undefined
+2021-08-17 10:17:10,181 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:397]
+2021-08-17 10:19:45,506 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:391]
+2021-08-17 10:20:20,664 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:21:37,981 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:22:06,780 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:22:18,005 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:22:41,382 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:23:38,307 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]
+2021-08-17 10:32:49,523 INFO: errors [in c:\Users\Cedge\Documents\VS-code-projects\fyyur-project\app.py:392]

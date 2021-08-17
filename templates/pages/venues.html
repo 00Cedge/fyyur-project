@@ -6,18 +6,18 @@
 	<ul class="items">
 		{% for venue in area.venues %}
 			<li class="btn-row">
-				<a href="/venues/{{ area.id }}">
+				<a href="/venues/{{ venue.id }}">
 					<i class="fas fa-music"></i>
 					<div class="item">
 						<h5>
-							{{ area.name }} 
-							<small>(Upcoming shows {{area.num_upcoming_shows}})</small>
+							{{ venue.name }} 
+							<small>(Upcoming shows {{venue.shows}})</small>
 						</h5>
 					</div>
 				</a>
 				<form>
 					<input type="submit" value="X" 
-					formmethod="POST" formaction="{{ url_for('delete_venue', venue_id=area.id) }}" class="btn btn-primary btn-xs btn-danger">
+					formmethod="POST" formaction="{{ url_for('delete_venue', venue_id=venue.id) }}" class="btn btn-primary btn-xs btn-danger">
 				</form>
 			</li>
 		{% endfor %}

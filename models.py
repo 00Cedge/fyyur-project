@@ -7,6 +7,7 @@ from flask_moment import Moment
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
+
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
@@ -42,6 +43,9 @@ class Venue(db.Model):
 
     def __repr__(self):
         return f'<Venue {self.id} {self.name} >'
+
+    def get_venue(self, city, state):
+        return self.query.filter(self.city==city, self.state==state).all()    
 
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
