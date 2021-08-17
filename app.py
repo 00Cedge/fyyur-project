@@ -2,9 +2,7 @@
 # Imports
 #----------------------------------------------------------------------------#
 
-from itertools import groupby
 import sys
-import json
 import dateutil.parser
 import babel
 from flask import Flask, render_template, request, Response, redirect, url_for, flash
